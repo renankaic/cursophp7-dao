@@ -20,12 +20,25 @@ echo $renan; //Aqui vai chamar o método __toString() da classe Usuario.php
 //echo json_encode($lista);
 
 //Carrega uma lista de usuarios buscando pelo login com LIKE
-//$search = Usuario::seach("e");
+//$search = Usuario::search("e");
 //echo json_encode($search);
 
 //Carrega um usuario de acordo com o login e senha
+//$usuario = new Usuario();
+//$usuario->login('renan', '146155');
+//echo $usuario;
+
+//Insert de um novo usuario
+//$aluno = new Usuario("aluno", "@lun0");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login('renan', '146155');
+$usuario->loadById(5);
+
+$usuario->update("professor", "testezinh0");
+
 echo $usuario;
+
 
 ?>

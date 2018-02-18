@@ -33,10 +33,16 @@ echo $renan; //Aqui vai chamar o método __toString() da classe Usuario.php
 //$aluno->insert();
 //echo $aluno;
 
-$usuario = new Usuario();
-$usuario->loadById(5);
+//Alterar um usuario
+//$usuario = new Usuario();
+//$usuario->loadById(5);
+//$usuario->update("professor", "testezinh0");
+//echo $usuario;
 
-$usuario->update("professor", "testezinh0");
+//Deletar um usuario
+$usuario = new Usuario(5);
+$usuario->loadById(5);
+$usuario->delete();
 
 echo $usuario;
 
